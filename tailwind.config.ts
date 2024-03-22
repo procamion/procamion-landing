@@ -15,6 +15,7 @@ const config: Config = {
       },
       colors: {
         primary: '#F89C2C',
+        gray: '#757575',
       },
       container: {
         center: true,

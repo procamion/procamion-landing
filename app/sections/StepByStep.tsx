@@ -1,102 +1,98 @@
 import React from 'react';
 import Title from '../components/Title';
 import StepCard from '../components/StepCard';
-import Image from 'next/image';
-import Subtitle from '../components/Subtitle';
-import {
-  ScreenSizeCategory,
-  useScreenSizeCategory,
-} from '../lib/hooks/useScreenSize';
+import StarsMobile from '../icons/StarsMobile';
+import StarsDesktop from '../icons/StarsDesktop';
 
 const StepByStep = () => {
-  const screenSizeCategory = useScreenSizeCategory();
-  const isMobile = screenSizeCategory === ScreenSizeCategory.Mobile;
   return (
-    <div className="align-center m-auto flex max-w-[1250px] flex-col items-center justify-center px-4">
-      <div className="text-center text-xl text-neutral-500 ">
-        A STEP-BY-STEP APPROACH
-      </div>
-      <Title size={'large'}>Delivery, without the hassle</Title>
-      <div className="align-center relative m-auto my-20 flex h-full w-full flex-col items-center justify-center gap-8">
-        <StepCard
-          headline={'Shipper'}
-          description={
-            'Сreate a cargo card or choose a carrier that travels along the desired route'
-          }
-          level={'first'}
-          step={1}
-        />
-        <StepCard
-          headline={'Carrier'}
-          description={
-            'Сhoose a cargo to transport or add your own travel route'
-          }
-          level={'second'}
-          step={2}
-        />
-        <StepCard
-          headline={'Procamion'}
-          description={
-            'Оn average, the response time to the cargo card takes several hours, so feel free to add your cargo and probably today you will find your carrier'
-          }
-          level={'second'}
-          step={3}
-        />
-        <div className="align-center flex  w-full items-center items-center justify-center justify-between gap-4 rounded-2xl border border-stone-900 border-opacity-30 bg-gradient-to-b from-white to-stone-50 p-14 md:flex-row ">
-          <div className="m-auto max-w-[360px]">
-            <Title className="mb-4" size={'medium'}>
-              Safe transactions
-            </Title>
-            <Subtitle className="" size={'small'}>
-              Make a contribution to the growth of the platform by leaving
-              feedback about the carrier or sender. We are interested in you
-              finding reliable partners for regular cooperation.
-            </Subtitle>
+    <section className="py-16 md:py-20 md:pb-28">
+      <div className="container">
+        <div className="flex flex-col items-center">
+          <div className="text-gray text-center text-base uppercase md:text-xl">
+            A STEP-BY-STEP APPROACH
           </div>
-        </div>
-        <StepCard headline={'Upcoming features'} level={'second'} step={4} />
-        <div className="flex w-full items-center justify-between gap-4 rounded-2xl border border-stone-900 border-opacity-30 bg-gradient-to-b from-white to-stone-50 p-14">
-          <div className="m-auto max-w-[360px]">
-            <Title size={'medium'}>Convenience</Title>
-            <ul className="mt-[8px] list-none">
-              <li className="relative mb-2 pl-5 before:absolute before:left-0 before:top-[10px] before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-full before:bg-yellow-500 before:content-['']">
-                <Subtitle size={'small'}>
-                  Add a comment to your card if you have any restrictions in
-                  order to find a more suitable partner for you
-                </Subtitle>
-              </li>
-              <li className="relative mb-2 pl-5 before:absolute before:left-0 before:top-[10px] before:h-2 before:w-2 before:-translate-y-1/2 before:rounded-full before:bg-yellow-500 before:content-['']">
-                <Subtitle size={'small'}>
-                  Сall up after confirmation of the response to discuss all the
-                  details of transportation
-                </Subtitle>
-              </li>
-            </ul>
-          </div>
-        </div>
-        {isMobile ? (
-          <div className="mx-auto flex w-full items-center justify-center bg-[url('/starsMobile.svg')] bg-top bg-no-repeat pt-8">
+          <Title className="mb-12 text-[26px] md:mb-20 md:text-[45px]">
+            Trucking without hassle
+          </Title>
+          <div className="align-center relative m-auto flex h-full w-full flex-col items-center justify-center gap-10 overflow-hidden md:gap-16">
+            <svg
+              width="2"
+              height="2500"
+              viewBox="0 0 2 2500"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              className="absolute left-1/2 top-0 -z-10 h-full -translate-x-1/2"
+            >
+              <line
+                x1="1"
+                y1="0"
+                x2="0"
+                y2="2500"
+                stroke="#F59929"
+                strokeWidth="2"
+                strokeDasharray="8 8"
+              />
+            </svg>
             <StepCard
-              headline={'Finish'}
-              description={'We delivered everything! '}
-              level={'first'}
+              headline="Sign up"
+              level="first"
+              description="Register a new account"
+              step={1}
+            />
+            <StepCard
+              headline="Post"
+              description="Simply create a new listing whenever you have cargo or an empty truck"
+              level="second"
               step={2}
             />
-          </div>
-        ) : (
-          <div className="mx-auto flex w-full items-center justify-center bg-[url('/starsDesktop.svg')] bg-center bg-no-repeat">
             <StepCard
-              headline={'Finish'}
-              description={'We delivered everything! '}
-              level={'first'}
-              step={2}
+              headline="Explore"
+              description="Browse through the available options of recent ads"
+              level="second"
+              step={3}
             />
-          </div>
-        )}
+            <StepCard
+              headline="Match"
+              description="Let our AI algorithms find the right carrier for the cargo"
+              level="second"
+              step={4}
+            />
+            <StepCard
+              headline="Manage"
+              description="Utilize our AI Automated Documentation System for invoicing and regulatory documentation"
+              level="second"
+              step={5}
+            />
+            <StepCard
+              headline="Monitor"
+              description="Easily handle your orders, view statistics, and track your cargo — all from your dashboard"
+              level="second"
+              step={6}
+            />
+            <StepCard headline="Upcoming features" level="second" step={7} />
+            <StepCard
+              headline="Complete"
+              description="Secure online payment"
+              level="second"
+              step={6}
+            />
+            <div className="relative mx-auto flex items-center justify-center bg-center bg-no-repeat pt-10 md:bg-[url('/starsDesktop.svg')] md:p-0">
+              <StarsMobile />
+              <StarsDesktop />
+              <StepCard
+                headline="Cargo delivered"
+                description="To avoid empty miles, the truck can announce its availability for the return trip."
+                level={'first'}
+                step={2}
+              />
+            </div>
 
-        <div className="absolute inset-0 -z-40 m-auto flex h-[77%] w-[2px] items-center justify-center border-2 border-dashed border-orange-500 md:h-[100%]"></div>
+            {/* <div className="absolute inset-0 -z-40 m-auto flex h-[77%] w-[2px] items-center justify-center border border-dashed border-orange-500 md:h-[100%]"></div> */}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 
