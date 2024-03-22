@@ -2,11 +2,10 @@
 import Benefits from './sections/Benefits';
 import Cta from './sections/Cta';
 import Faq from './sections/Faq';
-import Heading from './sections/heading/Heading';
+import Hero from './sections/Hero';
 import Offer from './sections/Offer';
-import Popup from './sections/Popup';
 import StepByStep from './sections/StepByStep';
-import Menu from './components/Menu';
+import Header from './components/Header';
 import Footer from './components/Footer';
 import { useState } from 'react';
 
@@ -14,25 +13,11 @@ export default function Home() {
   const [isOpen, setIsOpen] = useState(false);
   const [email, setEmail] = useState('');
   const [isDone, setIsDone] = useState(false);
+
   return (
     <main className="overflow-hidden">
-      <Popup
-        isOpen={isOpen}
-        setOpen={setIsOpen}
-        email={email}
-        setEmail={setEmail}
-        isDone={isDone}
-        setIsDone={setIsDone}
-      />
-      <Menu />
-      <Heading
-        isOpen={isOpen}
-        togglePopup={setIsOpen}
-        email={email}
-        setEmail={setEmail}
-        isDone={isDone}
-        setIsDone={setIsDone}
-      />
+      <Header />
+      <Hero />
       <StepByStep />
       <Offer />
       <Cta
