@@ -37,14 +37,14 @@ const HeroForm = () => {
   return (
     <div className="flex flex-col gap-4">
       <div className="mt-4 flex flex-col gap-3">
-        <Subtitle className="font-medium text-white">Request a demo</Subtitle>
+        <Subtitle className="font-normal text-white">Request a demo</Subtitle>
         <div className="flex w-full flex-col gap-4 border-0 md:flex-row">
           <form
             className="flex w-full flex-col items-stretch gap-3 border-0 md:flex-row"
             onSubmit={handleSubmit}
           >
             <input
-              className="w-full max-w-[520px] rounded-xl border-2 border-gray-200 px-4 py-3 text-lg"
+              className="w-full rounded-xl border-2 border-gray-200 px-4 py-2 text-lg md:max-w-[520px] md:py-3"
               type="email"
               name="email"
               id="email"
@@ -54,7 +54,7 @@ const HeroForm = () => {
             />
             <Button
               type="submit"
-              className="color-white bg-primary w-[200px] max-w-[400px] flex-shrink-0 rounded p-4 text-[20px] text-white hover:opacity-90"
+              className="color-white bg-primary w-full flex-shrink-0 rounded p-4 text-[20px] text-white hover:opacity-90 md:w-[200px]"
               level="primary"
             >
               Send
