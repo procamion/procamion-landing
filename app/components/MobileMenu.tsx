@@ -11,9 +11,9 @@ const MobileMenu = () => {
   };
 
   return (
-    <div className="flex w-[48px] h-[48px] mr-4 lg:hidden z-40">
+    <div className="z-40 mr-4 flex h-[48px] w-[48px] lg:hidden">
       <button
-        className="text-white p-2 focus:outline-none absolute z-50"
+        className="absolute z-50 p-2 text-white focus:outline-none"
         onClick={toggleMenu}
       >
         {!isOpen && (
@@ -35,10 +35,10 @@ const MobileMenu = () => {
       {isOpen && (
         <div
           onClick={toggleMenu}
-          className="bg-black/30 absolute w-full h-screen top-0 left-0 backdrop-blur-lg"
+          className="absolute left-0 top-0 h-screen w-full bg-black/30 backdrop-blur-lg"
         >
-          <div className="bg-[#1D1D1B] absolute top-8 right-0 w-fit h-fit px-8 py-4 m-4 rounded-xl flex flex-col items-center">
-            <nav className="space-y-4 text-white flex flex-col">
+          <div className="absolute right-0 top-8 m-4 flex h-fit w-fit flex-col items-center rounded-xl bg-[#1D1D1B] px-8 py-4">
+            <nav className="flex flex-col space-y-4 text-white">
               <Link href="#advantages">Advantages</Link>
               <Link href="#numbers">Numbers</Link>
               <Link href="#faq">FAQ</Link>

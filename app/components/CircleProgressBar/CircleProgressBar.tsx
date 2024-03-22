@@ -1,7 +1,7 @@
-import React, { useEffect, useRef, useState } from "react";
-import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
-import "react-circular-progressbar/dist/styles.css";
-import { useInView } from "react-intersection-observer";
+import React, { useEffect, useRef, useState } from 'react';
+import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { useInView } from 'react-intersection-observer';
 
 const AnimatedCircularProgressBar = () => {
   const [value, setValue] = useState(0);
@@ -28,12 +28,12 @@ const AnimatedCircularProgressBar = () => {
           // pathTransition: 'none',
 
           // Colors
-          textColor: "#000000",
-          textSize: "24px",
+          textColor: '#000000',
+          textSize: '24px',
 
           pathColor: `#F89C2C`,
-          trailColor: "#f0f0ef",
-          backgroundColor: "#3e98c7",
+          trailColor: '#f0f0ef',
+          backgroundColor: '#3e98c7',
         })}
         value={value}
         text={`-50%`}

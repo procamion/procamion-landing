@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 interface TabProps {
   childrenIco: React.ReactNode;
@@ -16,8 +16,8 @@ const Tab: React.FC<TabProps> = ({
   return (
     <div
       onClick={onClick}
-      className={`cursor-pointer flex flex-row w-full md:w-fit py-1 px-2 gap-2 md:py-2 md:px-4 rounded-xl justify-center align-center items-center ${
-        isActive ? "text-white bg-black" : "text-black bg-black/0"
+      className={`align-center flex w-full cursor-pointer flex-row items-center justify-center gap-2 rounded-xl px-2 py-1 md:w-fit md:px-4 md:py-2 ${
+        isActive ? 'bg-black text-white' : 'bg-black/0 text-black'
       }`}
     >
       {childrenIco}

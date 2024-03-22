@@ -18,9 +18,9 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
   textSecond,
 }) => {
   return (
-    <div className="w-full h-full">
+    <div className="h-full w-full">
       <Title size={'small'}>{title}</Title>
-      <div className="bg-[#252523]  h-full rounded-xl p-4">
+      <div className="h-full  rounded-xl bg-[#252523] p-4">
         <div className="float-right -ml-20">
           <div className="flex flex-col gap-2">
             <div className="flex flex-row gap-2">
@@ -96,14 +96,14 @@ const BenefitCard: React.FC<BenefitCardProps> = ({
             </svg>
           </div>
         </div>
-        <div className="text-center flex flex-col align-center items-center justify-center max-w-[350px] m-auto">
+        <div className="align-center m-auto flex max-w-[350px] flex-col items-center justify-center text-center">
           {iconFirst}
           <Subtitle className="text-white" size={'medium'}>
             {textFirst}
           </Subtitle>
         </div>
-        <div className="m-auto my-10 w-[350px] h-[1px] bg-gray-300/30" />
-        <div className="text-center flex flex-col align-center items-center justify-center max-w-[350px] m-auto">
+        <div className="m-auto my-10 h-[1px] w-[350px] bg-gray-300/30" />
+        <div className="align-center m-auto flex max-w-[350px] flex-col items-center justify-center text-center">
           {iconSecond}
           <Subtitle className="text-white" size={'medium'}>
             {textSecond}

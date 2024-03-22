@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import PopupComponent from "../components/PopupComponent";
+import PopupComponent from '../components/PopupComponent';
 
 interface PopupProps {
   isOpen: boolean;

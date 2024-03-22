@@ -12,7 +12,7 @@ const TabbedSwitch = () => {
   };
 
   return (
-    <div className="flex flex-col md:bg-[#D9D9D9] border-2 border-gray-200 rounded-xl w-fit">
+    <div className="flex w-fit flex-col rounded-xl border-2 border-gray-200 md:bg-[#D9D9D9]">
       <div className="flex flex-row gap-4">
         <Tab
           childrenIco={
@@ -58,7 +58,7 @@ const TabbedSwitch = () => {
         />
       </div>
 
-      <div className="block md:hidden p-2">
+      <div className="block p-2 md:hidden">
         <Subtitle size={'small'}>
           Improve your shipping income by finding new partners and as a result
           escape empty travelling

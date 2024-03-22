@@ -23,26 +23,26 @@ const Heading: React.FC<HeadingProps> = ({
   setIsDone,
 }) => {
   return (
-    <div className="max-w-[1250px] px-4 m-auto my-20 md:mt-[100px]">
-      <div className="relative flex flex-col md:flex-row justify-between align-center items-center">
-        <div className="flex flex-col gap-8 my-10">
+    <div className="m-auto my-20 max-w-[1250px] px-4 md:mt-[100px]">
+      <div className="align-center relative flex flex-col items-center justify-between md:flex-row">
+        <div className="my-10 flex flex-col gap-8">
           <Title size={'large'}>
             <>
-              <span className="text-black text-4xl font-medium md:text-7xl ">
+              <span className="text-4xl font-medium text-black md:text-7xl ">
                 First
               </span>
-              <span className="text-black text-4xl font-bold md:text-7xl ">
+              <span className="text-4xl font-bold text-black md:text-7xl ">
                 {' '}
               </span>
-              <span className="text-orange-400 text-4xl font-bold md:text-7xl ">
+              <span className="text-4xl font-bold text-orange-400 md:text-7xl ">
                 marketplace
                 <br />
                 trucking
               </span>
-              <span className="text-black text-4xl font-bold md:text-7xl ">
+              <span className="text-4xl font-bold text-black md:text-7xl ">
                 {' '}
               </span>
-              <span className="text-black text-4xl font-medium md:text-7xl ">
+              <span className="text-4xl font-medium text-black md:text-7xl ">
                 in Morocco
               </span>
             </>
@@ -56,8 +56,8 @@ const Heading: React.FC<HeadingProps> = ({
             </>
           </Subtitle>
         </div>
-        <div className="hidden  md:flex flex-row justify-center align-center items-center">
-          <div className="p-4 border-2 border-gray-200 bg-gradient-to-b from-white to-stone-50 rounded-2xl max-w-[270px] flex flex-col justify-center align-center items-center gap-4">
+        <div className="align-center  hidden flex-row items-center justify-center md:flex">
+          <div className="align-center flex max-w-[270px] flex-col items-center justify-center gap-4 rounded-2xl border-2 border-gray-200 bg-gradient-to-b from-white to-stone-50 p-4">
             <svg
               width="130"
               height="142"
@@ -83,10 +83,10 @@ const Heading: React.FC<HeadingProps> = ({
               result escape empty travelling
             </Subtitle>
           </div>
-          <div className="bg-gradient-to-b from-white to-stone-50 rounded-r-xl border-2 border-gray-200 h-[250px] border-l-0 my-10 w-[30px] " />
+          <div className="my-10 h-[250px] w-[30px] rounded-r-xl border-2 border-l-0 border-gray-200 bg-gradient-to-b from-white to-stone-50 " />
         </div>
       </div>
-      <div className="hidden  md:flex justify-end mr-[20%] mt-10">
+      <div className="mr-[20%]  mt-10 hidden justify-end md:flex">
         <svg
           width="226"
           height="100"

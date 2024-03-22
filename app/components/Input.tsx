@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
 interface InputProps {
-  type: "text" | "number" | "password" | "email"; // Specify the input type
+  type: 'text' | 'number' | 'password' | 'email'; // Specify the input type
   placeholder?: string;
   value: string;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
@@ -19,7 +19,7 @@ const Input: React.FC<InputProps> = ({
 }) => {
   return (
     <div
-      className={`flex flex-row justify-center align-center items-center gap-2 ${className}`}
+      className={`align-center flex flex-row items-center justify-center gap-2 ${className}`}
     >
       {prefix && <div>{prefix}</div>}
       <input

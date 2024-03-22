@@ -1,7 +1,7 @@
-import React, { FormEvent, useState } from "react";
-import Title from "./Title";
-import Subtitle from "./Subtitle";
-import Button from "./Button";
+import React, { FormEvent, useState } from 'react';
+import Title from './Title';
+import Subtitle from './Subtitle';
+import Button from './Button';
 
 interface ContactFormProps {
   isOpen: boolean;
@@ -20,8 +20,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
   isDone,
   setIsDone,
 }) => {
-  const [name, setName] = useState("");
-  const [message, setMessage] = useState("");
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -35,73 +35,73 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
     try {
       // Send the form data to the API route
-      const response = await fetch("/api/submit", {
-        method: "POST",
+      const response = await fetch('/api/submit', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle success
-        console.log("Form submitted successfully");
+        console.log('Form submitted successfully');
       } else {
         // Handle error
-        console.error("Form submission failed");
+        console.error('Form submission failed');
       }
 
-      setName("");
-      setEmail("");
-      setMessage("");
+      setName('');
+      setEmail('');
+      setMessage('');
       setOpen(false);
     } catch (error) {
-      setName("");
-      setEmail("");
-      setMessage("");
+      setName('');
+      setEmail('');
+      setMessage('');
       console.error(error);
     }
 
     try {
       // Send the form data to the API route
-      const response = await fetch("/api/mail", {
-        method: "POST",
+      const response = await fetch('/api/mail', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle success
-        console.log("Form submitted successfully");
+        console.log('Form submitted successfully');
       } else {
         // Handle error
-        console.error("Form submission failed");
+        console.error('Form submission failed');
       }
 
-      setName("");
-      setEmail("");
-      setMessage("");
+      setName('');
+      setEmail('');
+      setMessage('');
     } catch (error) {
-      setName("");
-      setEmail("");
-      setMessage("");
+      setName('');
+      setEmail('');
+      setMessage('');
 
       console.error(error);
     }
   };
 
   return isDone === false ? (
-    <div className="flex flex-col gap-4 justify-center align-center items-center">
-      <Title color="white" size={"large"}>
+    <div className="align-center flex flex-col items-center justify-center gap-4">
+      <Title color="white" size={'large'}>
         Contact us
       </Title>
-      <Subtitle className={"text-[#B0B0B0] text-center"} size={"small"}>
+      <Subtitle className={'text-center text-[#B0B0B0]'} size={'small'}>
         Fill out this simple form <br /> for feedback
       </Subtitle>
       <form className="w-full" onSubmit={handleSubmit}>
-        <div className="rounded-xl mb-4">
+        <div className="mb-4 rounded-xl">
           <input
             type="text"
             id="name"
@@ -110,10 +110,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
             value={name}
             onChange={(e) => setName(e.target.value)}
             required
-            className="w-full py-2 px-3 border-gray-600/30 bg-black/0 border-2 border-gray-200 text-white rounded-xl focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full rounded-xl border-2 border-gray-200 border-gray-600/30 bg-black/0 px-3 py-2 text-white focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>
-        <div className="rounded-xl mb-4">
+        <div className="mb-4 rounded-xl">
           <input
             type="email"
             name="email"
@@ -122,10 +122,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
             value={email}
             onChange={(e) => setEmail(e.target.value)}
             required
-            className="w-full py-2 px-3 border-gray-600/30 bg-black/0 border-2 border-gray-200 text-white rounded-xl focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full rounded-xl border-2 border-gray-200 border-gray-600/30 bg-black/0 px-3 py-2 text-white focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>
-        <div className="rounded-xl mb-4">
+        <div className="mb-4 rounded-xl">
           <input
             id="message"
             name="message"
@@ -133,13 +133,13 @@ const ContactForm: React.FC<ContactFormProps> = ({
             value={message}
             onChange={(e) => setMessage(e.target.value)}
             required
-            className="w-full py-2 px-3 border-gray-600/30 bg-black/0 border-2 border-gray-200 text-white rounded-xl focus:outline-none focus:ring focus:border-blue-300"
+            className="w-full rounded-xl border-2 border-gray-200 border-gray-600/30 bg-black/0 px-3 py-2 text-white focus:border-blue-300 focus:outline-none focus:ring"
           />
         </div>
         <div>
           <Button
-            className="w-full bg-gradient-to-b from-orange-400 to-amber-500 color-white text-white hover:opacity-90"
-            level={"primary"}
+            className="color-white w-full bg-gradient-to-b from-orange-400 to-amber-500 text-white hover:opacity-90"
+            level={'primary'}
           >
             Submit
           </Button>
@@ -148,10 +148,10 @@ const ContactForm: React.FC<ContactFormProps> = ({
     </div>
   ) : (
     <div className="flex flex-col gap-4 p-8">
-      <Title color="white" size={"medium"}>
+      <Title color="white" size={'medium'}>
         Thank you for your feedback!
       </Title>
-      <Subtitle className={"text-[#B0B0B0] "} size={"small"}>
+      <Subtitle className={'text-[#B0B0B0] '} size={'small'}>
         We will contact you shortly
       </Subtitle>
     </div>

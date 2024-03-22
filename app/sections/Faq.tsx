@@ -1,16 +1,16 @@
-import React from "react";
-import Title from "../components/Title";
-import TabbedSwitch from "../components/TabbedSwitch";
-import FaqComponent from "../components/FaqComponent";
+import React from 'react';
+import Title from '../components/Title';
+import TabbedSwitch from '../components/TabbedSwitch';
+import FaqComponent from '../components/FaqComponent';
 
 const Faq = () => {
   return (
     <div
       id="faq"
-      className="max-w-[1250px] my-20 px-4 m-auto flex flex-col justify-center align-center items-center"
+      className="align-center m-auto my-20 flex max-w-[1250px] flex-col items-center justify-center px-4"
     >
-      <div className="flex flex-row justify-center align-center items-center mb-10">
-        <Title size={"large"}>Frequently Asked Questions</Title>
+      <div className="align-center mb-10 flex flex-row items-center justify-center">
+        <Title size={'large'}>Frequently Asked Questions</Title>
         <svg
           width="44"
           height="44"

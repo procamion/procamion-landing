@@ -24,18 +24,18 @@ const PopupComponent: React.FC<PopupComponentProps> = ({
     return null;
   }
   return (
-    <div className="fixed top-0 left-0 w-full h-full flex justify-center items-center z-50">
+    <div className="fixed left-0 top-0 z-50 flex h-full w-full items-center justify-center">
       {/* Background overlay with backdrop blur */}
-      <div className="fixed top-0 left-0 w-full h-full bg-black opacity-80 backdrop-blur-xl"></div>
+      <div className="fixed left-0 top-0 h-full w-full bg-black opacity-80 backdrop-blur-xl"></div>
 
       {/* Popup container */}
-      <div className="bg-[#252523] rounded-lg shadow-lg w-96 p-4 relative">
+      <div className="relative w-96 rounded-lg bg-[#252523] p-4 shadow-lg">
         {/* Close button */}
         <button
           onClick={(event: React.MouseEvent<HTMLButtonElement>) =>
             setOpen(false)
           }
-          className="absolute top-2 right-2 p-2 rounded-full hover:bg-gray-200 hover:text-gray-800 transition duration-300"
+          className="absolute right-2 top-2 rounded-full p-2 transition duration-300 hover:bg-gray-200 hover:text-gray-800"
         >
           <svg
             xmlns="http://www.w3.org/2000/svg"

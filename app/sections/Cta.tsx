@@ -57,7 +57,7 @@ const Cta: React.FC<CtaProps> = ({
   if (type === 'black') {
     return (
       <div className="bg-black">
-        <div className="max-w-[1250px] p-4 flex flex-col justify-center items-center align-center m-auto gap-4 py-20">
+        <div className="align-center m-auto flex max-w-[1250px] flex-col items-center justify-center gap-4 p-4 py-20">
           <Title className="text-white" size="large">
             Global mission: available
             <br /> sustainble transportation
@@ -67,7 +67,7 @@ const Cta: React.FC<CtaProps> = ({
           </Subtitle>
 
           <form
-            className="flex flex-row max-w-[500px] w-full gap-4 m-auto"
+            className="m-auto flex w-full max-w-[500px] flex-row gap-4"
             onSubmit={handleSubmit}
           >
             <input
@@ -77,11 +77,11 @@ const Cta: React.FC<CtaProps> = ({
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Email"
               required
-              className="w-full py-2 px-3 border-gray-600/30 bg-black/0 border-2 border-gray-200 text-white rounded-xl focus:outline-none focus:ring focus:border-blue-300"
+              className="w-full rounded-xl border-2 border-gray-200 border-gray-600/30 bg-black/0 px-3 py-2 text-white focus:border-blue-300 focus:outline-none focus:ring"
             />
             <Button
               type="submit"
-              className="w-full bg-gradient-to-b from-orange-400 to-amber-500 color-white text-white hover:opacity-90"
+              className="color-white w-full bg-gradient-to-b from-orange-400 to-amber-500 text-white hover:opacity-90"
               level={'primary'}
             >
               Send
@@ -93,8 +93,8 @@ const Cta: React.FC<CtaProps> = ({
   } else {
     return (
       <div className="bg-amber-300">
-        <div className="max-w-[686px] m-auto p-4 flex flex-col justify-center items-center align-center gap-4 py-20">
-          <div className="flex justify-center align-center items-center">
+        <div className="align-center m-auto flex max-w-[686px] flex-col items-center justify-center gap-4 p-4 py-20">
+          <div className="align-center flex items-center justify-center">
             <div className="absolute">
               <svg
                 width="100%"
@@ -132,10 +132,10 @@ const Cta: React.FC<CtaProps> = ({
             carrier
           </Subtitle>
 
-          <div className="flex flex-col md:flex-row gap-4 mt-10 w-full">
+          <div className="mt-10 flex w-full flex-col gap-4 md:flex-row">
             <Button
               togglePopup={togglePopup}
-              className="bg-black/0 border-2 border-black w-full"
+              className="w-full border-2 border-black bg-black/0"
               level={'secondary'}
             >
               Contact us

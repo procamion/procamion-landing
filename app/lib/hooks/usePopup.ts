@@ -1,5 +1,5 @@
 // usePopup.ts
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 const usePopup = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -10,7 +10,7 @@ const usePopup = () => {
   }, [isOpen]);
 
   const openPopup = () => {
-    console.log("test");
+    console.log('test');
     setIsOpen(true);
   };
 

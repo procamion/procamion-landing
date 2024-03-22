@@ -14,15 +14,15 @@ const Benefits = () => {
   return (
     <div
       id="numbers"
-      className="m-auto max-w-[1250px] flex flex-col justify-center align-center items-center mt-20"
+      className="align-center m-auto mt-20 flex max-w-[1250px] flex-col items-center justify-center"
     >
-      <div className="flex justify-center items-center mb-8">
+      <div className="mb-8 flex items-center justify-center">
         {!isMobile && <CircularProgressBar />}
       </div>
-      <div className="text-center text-neutral-500 text-sm md:text-xl font-medium  uppercase">
+      <div className="text-center text-sm font-medium uppercase text-neutral-500  md:text-xl">
         environmental care
       </div>
-      <Title className="text-center px-4 mb-4" size="medium">
+      <Title className="mb-4 px-4 text-center" size="medium">
         CO2 emissions {isMobile && <br />} into the atmosphere
       </Title>
       {isMobile && (
@@ -30,8 +30,8 @@ const Benefits = () => {
           <CircularProgressBar />
         </div>
       )}
-      <div className="flex flex-col md:flex-row gap-4 mt-20 max-w-[1250px] w-full px-4 justify-center px-4">
-        <div className="flex flex-col justify-center w-full items-center align-center gap-4">
+      <div className="mt-20 flex w-full max-w-[1250px] flex-col justify-center gap-4 px-4 px-4 md:flex-row">
+        <div className="align-center flex w-full flex-col items-center justify-center gap-4">
           <b>Shipper</b>
           <BenefitCard
             title={''}
@@ -157,7 +157,7 @@ const Benefits = () => {
             textSecond={'Savings on transportation compared to cargo companies'}
           />
         </div>
-        <div className="flex flex-col justify-center w-full items-center align-center gap-4">
+        <div className="align-center flex w-full flex-col items-center justify-center gap-4">
           <b>Carrier</b>
           <BenefitCard
             title={''}

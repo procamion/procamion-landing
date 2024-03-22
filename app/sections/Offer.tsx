@@ -6,13 +6,13 @@ import CircularProgressBar from '../components/CircleProgressBar/CircleProgressB
 const Offer = () => {
   return (
     <div id="advantages" className="w-full bg-[#F5F5F5] py-20">
-      <div className="max-w-[1250px] py-20 flex flex-col m-auto justify-center align-center items-center gap-10 p-4 md:p-8">
+      <div className="align-center m-auto flex max-w-[1250px] flex-col items-center justify-center gap-10 p-4 py-20 md:p-8">
         <Title className={'text-center '} size={'large'}>
           Choose your way
           <br /> for a <b>better experience</b>
         </Title>
-        <div className="flex flex-col md:flex-row justify-between gap-10 align-center items-center">
-          <div className="max-w-[360px] p-4 bg-white rounded-2xl border border-stone-900 border-opacity-30 flex-col justify-center items-center gap-4 inline-flex">
+        <div className="align-center flex flex-col items-center justify-between gap-10 md:flex-row">
+          <div className="inline-flex max-w-[360px] flex-col items-center justify-center gap-4 rounded-2xl border border-stone-900 border-opacity-30 bg-white p-4">
             <Title className="text-center" size={'medium'}>
               If you are the <span className="text-amber-300">Shippper</span>
             </Title>
@@ -21,7 +21,7 @@ const Offer = () => {
               belongings, guarantee safety on a full cycle and are always in
               touch for prompt support
             </Subtitle>
-            <div className="flex flex-row justify-center items-center align-center gap-2">
+            <div className="align-center flex flex-row items-center justify-center gap-2">
               <svg
                 width="24"
                 height="24"
@@ -42,10 +42,10 @@ const Offer = () => {
               </p>
             </div>
           </div>
-          <p className="text-center text-neutral-500 text-3xl font-medium">
+          <p className="text-center text-3xl font-medium text-neutral-500">
             OR
           </p>
-          <div className="max-w-[360px] p-4 bg-white rounded-2xl border border-stone-900 border-opacity-30 flex-col justify-center items-center gap-4 inline-flex">
+          <div className="inline-flex max-w-[360px] flex-col items-center justify-center gap-4 rounded-2xl border border-stone-900 border-opacity-30 bg-white p-4">
             <Title className="text-center" size={'medium'}>
               If you are the <span className="text-orange-400">Carrier</span>
             </Title>
@@ -54,7 +54,7 @@ const Offer = () => {
               belongings, guarantee safety on a full cycle and are always in
               touch for prompt support
             </Subtitle>
-            <div className="flex flex-row justify-center items-center align-center gap-2">
+            <div className="align-center flex flex-row items-center justify-center gap-2">
               <svg
                 width="24"
                 height="24"

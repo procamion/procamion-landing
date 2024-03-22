@@ -1,5 +1,5 @@
-"use client";
-import React from "react";
+'use client';
+import React from 'react';
 
 interface SwitchProps {
   checked: boolean;
@@ -32,21 +32,21 @@ const Switch: React.FC<SwitchProps> = ({
       />
       <div className="flex items-center">
         <div
-          className={`w-5 h-5 mr-2 ${
-            checked ? "text-green-500" : "text-red-500"
+          className={`mr-2 h-5 w-5 ${
+            checked ? 'text-green-500' : 'text-red-500'
           }`}
         >
           {checked ? onIcon : offIcon}
         </div>
-        <div className="slider h-5 w-10 bg-gray-400 rounded-full relative">
+        <div className="slider relative h-5 w-10 rounded-full bg-gray-400">
           <div
-            className={`knob h-5 w-5 bg-white rounded-full absolute top-0 left-0 transition-transform ${
-              checked ? "transform-translate-x-full" : ""
+            className={`knob absolute left-0 top-0 h-5 w-5 rounded-full bg-white transition-transform ${
+              checked ? 'transform-translate-x-full' : ''
             }`}
           ></div>
         </div>
         <div className="ml-2">
-          {checked ? onText || "On" : offText || "Off"}
+          {checked ? onText || 'On' : offText || 'Off'}
         </div>
       </div>
     </label>

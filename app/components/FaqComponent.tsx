@@ -109,15 +109,15 @@ const FaqComponent: React.FC = () => {
   };
 
   return (
-    <div className="max-w-[920px]  w-full mx-auto p-4">
+    <div className="mx-auto  w-full max-w-[920px] p-4">
       <ul className="w-full">
         {faqItems.map((item, index) => (
           <li
             onClick={() => toggleFAQItem(index)}
             key={index}
-            className="mb-4 bg-zinc-100  p-4 rounded-xl w-full cursor-pointer"
+            className="mb-4 w-full  cursor-pointer rounded-xl bg-zinc-100 p-4"
           >
-            <div className="flex flex-row justify-between items-center align-center">
+            <div className="align-center flex flex-row items-center justify-between">
               {' '}
               <Title size={'small'}>{item.question}</Title>
               {icon(item.isOpen)}{' '}

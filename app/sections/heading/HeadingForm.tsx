@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import Button from "@/app/components/Button";
-import Input from "@/app/components/Input";
-import Subtitle from "@/app/components/Subtitle";
-import Switch from "@/app/components/Switch";
-import TabbedSwitch from "@/app/components/TabbedSwitch";
-import Title from "@/app/components/Title";
-import React, { useState } from "react";
+import Button from '@/app/components/Button';
+import Input from '@/app/components/Input';
+import Subtitle from '@/app/components/Subtitle';
+import Switch from '@/app/components/Switch';
+import TabbedSwitch from '@/app/components/TabbedSwitch';
+import Title from '@/app/components/Title';
+import React, { useState } from 'react';
 
 interface HeadingFormProps {
   isOpen: boolean;
@@ -35,24 +35,24 @@ const HeadingForm: React.FC<HeadingFormProps> = ({
 
     try {
       // Send the form data to the API route
-      const response = await fetch("/api/mail", {
-        method: "POST",
+      const response = await fetch('/api/mail', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle success
-        console.log("Form submitted successfully");
+        console.log('Form submitted successfully');
       } else {
         // Handle error
-        console.error("Form submission failed");
+        console.error('Form submission failed');
       }
-      setEmail("");
+      setEmail('');
     } catch (error) {
-      setEmail("");
+      setEmail('');
 
       console.error(error);
     }
@@ -60,17 +60,17 @@ const HeadingForm: React.FC<HeadingFormProps> = ({
 
   return (
     <div className="flex flex-col gap-4">
-      <div className="flex flex-col gap-4 mt-4">
-        <Subtitle size={"large"} className="font-bold">
+      <div className="mt-4 flex flex-col gap-4">
+        <Subtitle size={'large'} className="font-bold">
           <b>Subsribe newsletter</b>
         </Subtitle>
-        <div className="flex flex-col md:flex-row gap-4 border-0 w-full">
+        <div className="flex w-full flex-col gap-4 border-0 md:flex-row">
           <form
-            className="flex flex-col md:flex-row gap-4 border-0 w-full"
+            className="flex w-full flex-col gap-4 border-0 md:flex-row"
             onSubmit={handleSubmit}
           >
             <input
-              className="border-2 border-gray-200 w-full max-w-[400px] h-[48px] px-4 rounded-xl"
+              className="h-[48px] w-full max-w-[400px] rounded-xl border-2 border-gray-200 px-4"
               type="email"
               name="email"
               id="email"
@@ -80,8 +80,8 @@ const HeadingForm: React.FC<HeadingFormProps> = ({
             />
             <Button
               type="submit"
-              className=" bg-gradient-to-b from-orange-400 to-amber-500 color-white text-white hover:opacity-90 w-[160px] w-full md:w-[160px]  max-w-[400px]"
-              level={"primary"}
+              className=" color-white w-[160px] w-full max-w-[400px] bg-gradient-to-b from-orange-400 to-amber-500 text-white hover:opacity-90  md:w-[160px]"
+              level={'primary'}
             >
               Send
             </Button>

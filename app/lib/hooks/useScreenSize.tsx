@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { useState, useEffect } from "react";
+import { useState, useEffect } from 'react';
 
 // Define breakpoints for tablet and mobile
 const TABLET_BREAKPOINT = 768;
@@ -8,9 +8,9 @@ const MOBILE_BREAKPOINT = 576;
 
 // Define screen size categories
 export enum ScreenSizeCategory {
-  Desktop = "Desktop",
-  Tablet = "Tablet",
-  Mobile = "Mobile",
+  Desktop = 'Desktop',
+  Tablet = 'Tablet',
+  Mobile = 'Mobile',
 }
 
 // Define a custom hook to get screen size category
@@ -33,14 +33,14 @@ export function useScreenSizeCategory() {
     }
 
     // Add event listener to update screen size category when the window is resized
-    window.addEventListener("resize", updateScreenSizeCategory);
+    window.addEventListener('resize', updateScreenSizeCategory);
 
     // Initial screen size category
     updateScreenSizeCategory();
 
     // Remove event listener on component unmount
     return () => {
-      window.removeEventListener("resize", updateScreenSizeCategory);
+      window.removeEventListener('resize', updateScreenSizeCategory);
     };
   }, []);
 
