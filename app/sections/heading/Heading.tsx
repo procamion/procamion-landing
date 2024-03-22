@@ -1,9 +1,9 @@
-import Menu from "../../components/Menu";
-import Subtitle from "../../components/Subtitle";
-import Title from "../../components/Title";
-import Input from "../../components/Input";
-import Button from "../../components/Button";
-import HeadingForm from "./HeadingForm";
+import Menu from '../../components/Menu';
+import Subtitle from '../../components/Subtitle';
+import Title from '../../components/Title';
+import Input from '../../components/Input';
+import Button from '../../components/Button';
+import HeadingForm from './HeadingForm';
 
 interface HeadingProps {
   isOpen: boolean;
@@ -26,13 +26,13 @@ const Heading: React.FC<HeadingProps> = ({
     <div className="max-w-[1250px] px-4 m-auto my-20 md:mt-[100px]">
       <div className="relative flex flex-col md:flex-row justify-between align-center items-center">
         <div className="flex flex-col gap-8 my-10">
-          <Title size={"large"}>
+          <Title size={'large'}>
             <>
               <span className="text-black text-4xl font-medium md:text-7xl ">
                 First
               </span>
               <span className="text-black text-4xl font-bold md:text-7xl ">
-                {" "}
+                {' '}
               </span>
               <span className="text-orange-400 text-4xl font-bold md:text-7xl ">
                 marketplace
@@ -40,14 +40,14 @@ const Heading: React.FC<HeadingProps> = ({
                 trucking
               </span>
               <span className="text-black text-4xl font-bold md:text-7xl ">
-                {" "}
+                {' '}
               </span>
               <span className="text-black text-4xl font-medium md:text-7xl ">
                 in Morocco
               </span>
             </>
           </Title>
-          <Subtitle className="text-neutral-500" size={"large"}>
+          <Subtitle className="text-neutral-500" size={'large'}>
             <>
               Now freight carriers will be less likely to travel empty.
               <br /> And the shipper of goods will save their money on sending
@@ -72,13 +72,13 @@ const Heading: React.FC<HeadingProps> = ({
               <path
                 d="M124.5 37.9365L64.9998 70.9921M64.9998 70.9921L5.49977 37.9365M64.9998 70.9921L65 137.492M128 99.4022V42.5824C128 40.1839 128 38.9847 127.647 37.9151C127.334 36.9688 126.823 36.1003 126.148 35.3674C125.384 34.5391 124.336 33.9567 122.239 32.7918L70.4392 4.01407C68.454 2.91116 67.4614 2.35971 66.4102 2.14351C65.4798 1.95216 64.5202 1.95216 63.5899 2.14351C62.5387 2.35971 61.546 2.91116 59.5608 4.01407L7.7608 32.7919C5.66413 33.9567 4.6158 34.5391 3.85243 35.3674C3.1771 36.1003 2.66603 36.9688 2.35339 37.9151C2 38.9847 2 40.1839 2 42.5824V99.4022C2 101.801 2 103 2.35339 104.07C2.66603 105.016 3.1771 105.884 3.85243 106.617C4.6158 107.446 5.66413 108.028 7.76081 109.193L59.5608 137.971C61.546 139.073 62.5387 139.625 63.5899 139.841C64.5202 140.032 65.4798 140.032 66.4102 139.841C67.4614 139.625 68.454 139.073 70.4392 137.971L122.239 109.193C124.336 108.028 125.384 107.446 126.148 106.617C126.823 105.884 127.334 105.016 127.647 104.07C128 103 128 101.801 128 99.4022Z"
                 stroke="#1D1D1B"
-                stroke-width="4"
-                stroke-linecap="round"
-                stroke-linejoin="round"
+                strokeWidth="4"
+                strokeLinecap="round"
+                strokeLinejoin="round"
               />
             </svg>
-            <Title size={"small"}>Choose your way</Title>
-            <Subtitle size={"small"} className="text-center">
+            <Title size={'small'}>Choose your way</Title>
+            <Subtitle size={'small'} className="text-center">
               Improve your shipping income by finding new partners and as a
               result escape empty travelling
             </Subtitle>

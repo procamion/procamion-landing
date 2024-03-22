@@ -1,7 +1,7 @@
-"use client";
+'use client';
 
-import React, { useState } from "react";
-import Title from "./Title";
+import React, { useState } from 'react';
+import Title from './Title';
 
 type FAQItem = {
   question: string;
@@ -11,12 +11,12 @@ type FAQItem = {
 
 const initialFAQItems: FAQItem[] = [
   {
-    question: "What is Next.js?",
-    answer: "Next.js is a React framework for building web applications.",
+    question: 'What is Next.js?',
+    answer: 'Next.js is a React framework for building web applications.',
     isOpen: false, // Начальное состояние: закрыто
   },
   {
-    question: "How do I create a new Next.js project?",
+    question: 'How do I create a new Next.js project?',
     answer:
       'You can create a new Next.js project using the "create-next-app" command.',
     isOpen: false, // Начальное состояние: закрыто
@@ -47,8 +47,8 @@ const FaqComponent: React.FC = () => {
           <path
             d="M12 3.5L12 21.5M21 12.5L3 12.5"
             stroke="#757575"
-            stroke-width="2.5"
-            stroke-linecap="round"
+            strokeWidth="2.5"
+            strokeLinecap="round"
           />
         </svg>
       );
@@ -93,8 +93,8 @@ const FaqComponent: React.FC = () => {
                           id="Vector"
                           d="M21 12.5L3 12.5"
                           stroke="#757575"
-                          stroke-width="2.5"
-                          stroke-linecap="round"
+                          strokeWidth="2.5"
+                          strokeLinecap="round"
                         />
                       </g>
                     </g>
@@ -118,11 +118,11 @@ const FaqComponent: React.FC = () => {
             className="mb-4 bg-zinc-100  p-4 rounded-xl w-full cursor-pointer"
           >
             <div className="flex flex-row justify-between items-center align-center">
-              {" "}
-              <Title size={"small"}>{item.question}</Title>
-              {icon(item.isOpen)}{" "}
+              {' '}
+              <Title size={'small'}>{item.question}</Title>
+              {icon(item.isOpen)}{' '}
             </div>
-            {item.isOpen && <p className="mt-2">{item.answer}</p>}{" "}
+            {item.isOpen && <p className="mt-2">{item.answer}</p>}{' '}
             {/* Показываем ответ, если элемент открыт */}
           </li>
         ))}

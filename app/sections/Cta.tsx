@@ -1,11 +1,11 @@
-import React from "react";
-import Title from "../components/Title";
-import Subtitle from "../components/Subtitle";
-import Input from "../components/Input";
-import Button from "../components/Button";
+import React from 'react';
+import Title from '../components/Title';
+import Subtitle from '../components/Subtitle';
+import Input from '../components/Input';
+import Button from '../components/Button';
 
 interface CtaProps {
-  type: "black" | "yellow";
+  type: 'black' | 'yellow';
   isOpen: boolean;
   togglePopup: (isOpen: boolean) => void; // Add an onClose callback prop to handle closing the popup
   email: string;
@@ -32,29 +32,29 @@ const Cta: React.FC<CtaProps> = ({
 
     try {
       // Send the form data to the API route
-      const response = await fetch("/api/mail", {
-        method: "POST",
+      const response = await fetch('/api/mail', {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
 
       if (response.ok) {
         // Handle success
-        console.log("Form submitted successfully");
+        console.log('Form submitted successfully');
       } else {
         // Handle error
-        console.error("Form submission failed");
+        console.error('Form submission failed');
       }
-      setEmail("");
+      setEmail('');
     } catch (error) {
-      setEmail("");
+      setEmail('');
       console.error(error);
     }
   };
 
-  if (type === "black") {
+  if (type === 'black') {
     return (
       <div className="bg-black">
         <div className="max-w-[1250px] p-4 flex flex-col justify-center items-center align-center m-auto gap-4 py-20">
@@ -62,7 +62,7 @@ const Cta: React.FC<CtaProps> = ({
             Global mission: available
             <br /> sustainble transportation
           </Title>
-          <Subtitle className="text-zinc-400" size={"medium"}>
+          <Subtitle className="text-zinc-400" size={'medium'}>
             Doubts remain? just look at these numbers..
           </Subtitle>
 
@@ -82,7 +82,7 @@ const Cta: React.FC<CtaProps> = ({
             <Button
               type="submit"
               className="w-full bg-gradient-to-b from-orange-400 to-amber-500 color-white text-white hover:opacity-90"
-              level={"primary"}
+              level={'primary'}
             >
               Send
             </Button>
@@ -106,7 +106,7 @@ const Cta: React.FC<CtaProps> = ({
                 <path
                   d="M1 91C1 91 110.76 0.997489 344 1C577.24 1.00251 687 91 687 91"
                   stroke="url(#paint0_linear_228_994)"
-                  stroke-dasharray="15 15"
+                  strokeDasharray="15 15"
                 />
                 <defs>
                   <linearGradient
@@ -118,7 +118,7 @@ const Cta: React.FC<CtaProps> = ({
                     gradientUnits="userSpaceOnUse"
                   >
                     <stop />
-                    <stop offset="1" stop-opacity="0" />
+                    <stop offset="1" stopOpacity="0" />
                   </linearGradient>
                 </defs>
               </svg>
@@ -126,7 +126,7 @@ const Cta: React.FC<CtaProps> = ({
             <Title size="medium">Procamion</Title>
           </div>
 
-          <Subtitle className="text-center" size={"medium"}>
+          <Subtitle className="text-center" size={'medium'}>
             Оn average, the response time to the cargo card takes several hours,
             so feel free to add your cargo and probably today you will find your
             carrier
@@ -136,7 +136,7 @@ const Cta: React.FC<CtaProps> = ({
             <Button
               togglePopup={togglePopup}
               className="bg-black/0 border-2 border-black w-full"
-              level={"secondary"}
+              level={'secondary'}
             >
               Contact us
             </Button>
