@@ -1,5 +1,6 @@
 'use client';
 import React from 'react';
+import { twMerge } from 'tailwind-merge';
 
 interface ButtonProps {
   children: React.ReactNode;
@@ -7,7 +8,7 @@ interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   size?: 'small' | 'medium' | 'large';
   areaLabel?: string;
-  level: 'primary' | 'secondary' | 'tertiary';
+  level?: 'primary' | 'secondary' | 'tertiary';
   disabled?: boolean;
   className?: string;
   isOpen?: boolean;
@@ -58,7 +59,7 @@ const Button: React.FC<ButtonProps> = ({
     <button
       onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleClick()}
       disabled={disabled}
-      className={`${getButtonStyles()} ${className}`}
+      className={twMerge(`${getButtonStyles()}`, className)}
       aria-label={areaLabel}
     >
       {children}

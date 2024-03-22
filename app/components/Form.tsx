@@ -94,10 +94,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
 
   return isDone === false ? (
     <div className="align-center flex flex-col items-center justify-center gap-4">
-      <Title color="white" size={'large'}>
-        Contact us
-      </Title>
-      <Subtitle className={'text-center text-[#B0B0B0]'} size={'small'}>
+      <Title className="text-white">Contact us</Title>
+      <Subtitle className={'text-center text-[#B0B0B0]'}>
         Fill out this simple form <br /> for feedback
       </Subtitle>
       <form className="w-full" onSubmit={handleSubmit}>
@@ -148,10 +146,8 @@ const ContactForm: React.FC<ContactFormProps> = ({
     </div>
   ) : (
     <div className="flex flex-col gap-4 p-8">
-      <Title color="white" size={'medium'}>
-        Thank you for your feedback!
-      </Title>
-      <Subtitle className={'text-[#B0B0B0] '} size={'small'}>
+      <Title className="text-white">Thank you for your feedback!</Title>
+      <Subtitle className={'text-[#B0B0B0]'}>
         We will contact you shortly
       </Subtitle>
     </div>
