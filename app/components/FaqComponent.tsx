@@ -118,8 +118,7 @@ const FaqComponent: React.FC = () => {
             className="mb-4 w-full  cursor-pointer rounded-xl bg-zinc-100 p-4"
           >
             <div className="align-center flex flex-row items-center justify-between">
-              {' '}
-              <Title size={'small'}>{item.question}</Title>
+              <Title>{item.question}</Title>
               {icon(item.isOpen)}{' '}
             </div>
             {item.isOpen && <p className="mt-2">{item.answer}</p>}{' '}

@@ -10,7 +10,7 @@ const Faq = () => {
       className="align-center m-auto my-20 flex max-w-[1250px] flex-col items-center justify-center px-4"
     >
       <div className="align-center mb-10 flex flex-row items-center justify-center">
-        <Title size={'large'}>Frequently Asked Questions</Title>
+        <Title>Frequently Asked Questions</Title>
         <svg
           width="44"
           height="44"

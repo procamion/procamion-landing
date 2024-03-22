@@ -59,7 +59,7 @@ const TabbedSwitch = () => {
       </div>
 
       <div className="block p-2 md:hidden">
-        <Subtitle size={'small'}>
+        <Subtitle>
           Improve your shipping income by finding new partners and as a result
           escape empty travelling
         </Subtitle>

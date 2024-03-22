@@ -58,11 +58,11 @@ const Cta: React.FC<CtaProps> = ({
     return (
       <div className="bg-black">
         <div className="align-center m-auto flex max-w-[1250px] flex-col items-center justify-center gap-4 p-4 py-20">
-          <Title className="text-white" size="large">
+          <Title className="text-white">
             Global mission: available
             <br /> sustainble transportation
           </Title>
-          <Subtitle className="text-zinc-400" size={'medium'}>
+          <Subtitle className="text-zinc-400">
             Doubts remain? just look at these numbers..
           </Subtitle>
 
@@ -123,10 +123,10 @@ const Cta: React.FC<CtaProps> = ({
                 </defs>
               </svg>
             </div>
-            <Title size="medium">Procamion</Title>
+            <Title>Procamion</Title>
           </div>
 
-          <Subtitle className="text-center" size={'medium'}>
+          <Subtitle className="text-center">
             Оn average, the response time to the cargo card takes several hours,
             so feel free to add your cargo and probably today you will find your
             carrier
