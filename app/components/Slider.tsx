@@ -74,7 +74,7 @@ export default function Slider() {
             key={slide.title}
           >
             <article className="flex h-full flex-col items-center rounded-xl border border-[#1D1D1B25] bg-white px-4 py-5">
-              <Title className="mb-3 text-center text-[22px] leading-[1.2] md:mb-4 md:text-[30px]">
+              <Title className="text-primary mb-3 text-center text-[22px] leading-[1.2] md:mb-4 md:text-[30px]">
                 {slide.title}
               </Title>
               <div className="mt-auto">
