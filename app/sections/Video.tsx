@@ -10,7 +10,7 @@ export default function Video() {
             className="aspect-video w-full max-w-[960px] rounded-lg"
             controls={true}
           >
-            <source src="/video/hero-video.mp4" type="video/mp4" />
+            <source src="/video/tutorial.mp4" type="video/mp4" />
           </video>
         </div>
       </div>

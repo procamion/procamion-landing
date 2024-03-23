@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import FooterNav from './FooterNav';
 
 const Footer = () => {
   return (
@@ -18,11 +19,7 @@ const Footer = () => {
           </div>
           <div className="md:pr-10">
             <h4 className="mb-2 text-white">Procamion</h4>
-            <ul className="flex flex-col items-center gap-1 text-gray-500 md:items-start">
-              <Link href="#hero">Home</Link>
-              <Link href="#advantages">Advantages</Link>
-              <Link href="#contact">Contact us</Link>
-            </ul>
+            <FooterNav />
           </div>
         </div>
         <div className="flex flex-col items-center justify-between gap-4 border-t border-white border-opacity-30 py-8 text-sm font-normal text-gray-100 text-opacity-70 md:flex-row md:text-base">

@@ -75,7 +75,7 @@ const StepByStep = () => {
               headline="Complete"
               description="Secure online payment"
               level="second"
-              step={6}
+              step={8}
             />
             <div className="relative mx-auto flex items-center justify-center bg-center bg-no-repeat pt-10 md:p-0">
               <StarsMobile />

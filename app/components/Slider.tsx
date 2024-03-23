@@ -18,12 +18,22 @@ const slidesData = [
       'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
   },
   {
-    title: 'Dynamic Pricing',
+    title: 'Dynamic ',
     content:
       'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
   },
   {
     title: 'One more slide',
+    content:
+      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+  },
+  {
+    title: 'Second slide',
+    content:
+      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+  },
+  {
+    title: 'Third slide',
     content:
       'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
   },
@@ -33,12 +43,15 @@ const swiperOptions = {
   modules: [Navigation],
   slidesPerView: 'auto',
   spaceBetween: 15,
+  centeredSlides: true,
   breakpoints: {
     1072: {
       slidesPerView: 3,
+      centeredSlides: false,
     },
     768: {
       slidesPerView: 2,
+      centeredSlides: false,
     },
   },
 } satisfies SwiperOptions;
