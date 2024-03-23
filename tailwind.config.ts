@@ -16,7 +16,8 @@ const config: Config = {
       colors: {
         primary: '#F89C2C',
         secondary: '#F6C443',
-        gray: '#757575',
+        dark: '#252523',
+        gray: { DEFAULT: '#757575', '100': '#B0B0B0' },
       },
       container: {
         center: true,

@@ -8,7 +8,7 @@ interface SubtitleProps {
 
 const Subtitle: React.FC<SubtitleProps> = ({ children, className }) => {
   return (
-    <h3 className={twMerge('text-[22px] font-normal', className)}>
+    <h3 className={twMerge('text-lg font-normal md:text-[22px]', className)}>
       {children}
     </h3>
   );

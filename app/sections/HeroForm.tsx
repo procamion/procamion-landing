@@ -3,6 +3,7 @@
 import Button from '@/app/components/Button';
 import Subtitle from '@/app/components/Subtitle';
 import React, { useState } from 'react';
+import SubmitButton from '../components/SubmitButton';
 
 const HeroForm = () => {
   const [email, setEmail] = useState('');
@@ -44,21 +45,14 @@ const HeroForm = () => {
             onSubmit={handleSubmit}
           >
             <input
-              className="w-full rounded-xl border-2 border-gray-200 px-4 py-2 text-lg md:max-w-[520px] md:py-3"
+              className="w-full rounded-lg border border-black px-4 py-2 text-lg outline-none md:max-w-[520px] md:rounded-xl md:py-3"
               type="email"
               name="email"
-              id="email"
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
             />
-            <Button
-              type="submit"
-              className="color-white bg-primary w-full flex-shrink-0 rounded p-4 text-[20px] text-white hover:opacity-90 md:w-[200px]"
-              level="primary"
-            >
-              Send
-            </Button>
+            <SubmitButton />
           </form>
         </div>
       </div>

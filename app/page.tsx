@@ -20,26 +20,9 @@ export default function Home() {
       <Hero />
       <StepByStep />
       <Offer />
-      <Cta
-        type="black"
-        isOpen={isOpen}
-        togglePopup={setIsOpen}
-        email={email}
-        setEmail={setEmail}
-        isDone={isDone}
-        setIsDone={setIsDone}
-      />
+      <Cta />
       <Benefits />
       <Faq />
-      <Cta
-        type="yellow"
-        isOpen={isOpen}
-        togglePopup={setIsOpen}
-        email={email}
-        setEmail={setEmail}
-        isDone={isDone}
-        setIsDone={setIsDone}
-      />
       <Footer />
     </main>
   );
