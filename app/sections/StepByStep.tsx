@@ -77,7 +77,7 @@ const StepByStep = () => {
               level="second"
               step={6}
             />
-            <div className="relative mx-auto flex items-center justify-center bg-center bg-no-repeat pt-10 md:bg-[url('/starsDesktop.svg')] md:p-0">
+            <div className="relative mx-auto flex items-center justify-center bg-center bg-no-repeat pt-10 md:p-0">
               <StarsMobile />
               <StarsDesktop />
               <StepCard

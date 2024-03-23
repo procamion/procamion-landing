@@ -6,6 +6,7 @@ import Header from './components/Header';
 import Benefits from './sections/Benefits';
 import CtaWithModal from './sections/CtaWithModal';
 import Footer from './components/Footer';
+import Video from './sections/Video';
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <StepByStep />
       <Offer />
       <Cta />
+      <Video />
       <Benefits />
       <CtaWithModal />
       <Footer />
