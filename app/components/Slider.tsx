@@ -15,12 +15,12 @@ const slidesData = [
   {
     title: 'Real-time Tracking and Visibility',
     content:
-      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+      'Monitor shipment status, anticipate delays, and communicate with customers in real-time.',
   },
   {
     title: 'Dynamic Pricing',
     content:
-      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+      'Adjust rates in real-time based on demand, capacity, and market conditions, ensuring flexibility and cost efficiency.',
   },
   {
     title: 'AI Automated Documentation',
