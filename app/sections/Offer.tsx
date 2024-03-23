@@ -13,18 +13,15 @@ const Offer = () => {
           <div className="align-center flex flex-col items-center justify-between gap-6 md:flex-row md:items-stretch lg:gap-10">
             <div className="inline-flex w-full max-w-[360px] flex-1 flex-col gap-4 rounded-2xl border border-stone-900 border-opacity-30 bg-white px-4 py-6 lg:min-w-[410px] lg:px-6 lg:py-8">
               <Title className="text-center text-[22px] lg:text-[30px]">
-                If you are the <span className="text-amber-300">Shippper</span>
+                If you are the <span className="text-amber-300">Shipper</span>
               </Title>
-              <ul className="mb-6 list-disc pl-6 lg:mb-8">
+              <ul className="list-disc pl-6">
                 <li>Any type of loading: FTL or LTL</li>
                 <li>Fast search for a carrier</li>
                 <li>Dynamic Pricing</li>
                 <li>Automated Documentation</li>
                 <li>Real-Time Tracking</li>
               </ul>
-              <Button className="bg-secondary mt-auto w-full p-3 text-lg font-medium text-white lg:p-4 lg:text-[22px]">
-                Sign Up as Shipper
-              </Button>
             </div>
             <div className="flex items-center">
               <p className="text-center text-2xl font-medium text-neutral-500 lg:text-3xl">
@@ -35,16 +32,13 @@ const Offer = () => {
               <Title className="text-center text-[22px] lg:text-[30px]">
                 If you are the <span className="text-orange-400">Carrier</span>
               </Title>
-              <ul className="mb-6 list-disc pl-6 lg:mb-8">
+              <ul className="list-disc pl-6">
                 <li>Access to a broader freight exchange market</li>
                 <li>Efficient load matching</li>
                 <li>Reduced empty miles</li>
                 <li>Insured payment</li>
                 <li>Latest Road and Weather Updates</li>
               </ul>
-              <Button className="bg-primary mt-auto w-full p-3 text-lg font-medium text-white lg:p-4 lg:text-[22px]">
-                Sign Up as Carrier
-              </Button>
             </div>
           </div>
         </div>

@@ -25,7 +25,7 @@ const Heading = () => {
             <Subtitle className="max-w-[720px] text-white">
               Shippers and carriers can now easily find each other, connect, and
               coordinate the transport of&nbsp;fresh cargo between Europe and
-              Africa.
+              Africa
             </Subtitle>
           </div>
         </div>

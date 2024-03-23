@@ -18,24 +18,24 @@ const slidesData = [
       'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
   },
   {
-    title: 'Dynamic ',
+    title: 'Dynamic Pricing',
     content:
       'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
   },
   {
-    title: 'One more slide',
+    title: 'AI Automated Documentation',
     content:
-      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+      'Automated freight document generation, invoicing, and bookkeeping.',
   },
   {
-    title: 'Second slide',
+    title: 'Payment Processing',
     content:
-      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+      'Our digital payment system ensures secure and efficient payment processing, minimizing administrative overhead.',
   },
   {
-    title: 'Third slide',
+    title: 'Trucking Analytics',
     content:
-      'Our algorithms speed up the matching process by pairing available shipments with suitable carriers based on cargo type, capacity, equipment, and location.',
+      'Identify potential risks and security threats to shipments and take preemptive measures to prevent disruptions and ensure cargo safety.',
   },
 ] as const;
 

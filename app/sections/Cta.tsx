@@ -42,7 +42,7 @@ const Cta = () => {
           <div className="max-w-[960px]">
             <Title className="mb-4 text-center text-white md:mb-5">
               Our mission: to provide smart transportation solutions between
-              Europe and Africa.
+              Europe and Africa
             </Title>
             <Subtitle className="mb-6 text-center font-medium text-gray-100 md:mb-14">
               Still have questions? Drop your email for further assistance!
