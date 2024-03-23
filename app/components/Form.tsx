@@ -30,19 +30,20 @@ const ContactForm = ({ closePopup }: Props) => {
         body: JSON.stringify(formData),
       });
 
-      const responseMail = await fetch('/api/mail', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
+      // const responseMail = await fetch('/api/mail', {
+      //   method: 'POST',
+      //   headers: {
+      //     'Content-Type': 'application/json',
+      //   },
+      //   body: JSON.stringify(formData),
+      // });
 
-      if (response.ok && responseMail.ok) {
+      if (response.ok) {
         // Handle success
         console.log('Form submitted successfully');
       } else {
         // Handle error
+        console.log(response.status);
         console.error('Form submission failed');
       }
 

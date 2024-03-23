@@ -10,7 +10,7 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
       // Replace this URL with your Google Apps Script web app URL
       const scriptUrl =
-        'https://script.google.com/macros/s/AKfycbyl5Tf-BV_sIMlzoLsDdDn5TjJQldRf-cD_xX7nw9bP-Bhw_FNcaJ5ya5men7_8-EKYpw/exec';
+        'https://script.google.com/macros/s/AKfycbygwx7EbtUh3cPNQEMZ4c8xmww-Zk04fKoh9-cMGwsWdtHoW2w5d67NjxBYwYhnuC8w/exec';
 
       // Send the form data to the Google Sheets script
       const response = await fetch(scriptUrl, {
@@ -23,22 +23,22 @@ export async function POST(req: NextRequest, res: NextResponse) {
 
       if (response.ok) {
         // Handle success
-        NextResponse.json(
+        return NextResponse.json(
           { message: 'Form submitted successfully' },
           { status: 200 }
-        );
+        )
       } else {
         // Handle error
-        NextResponse.json(
-          { message: 'Form submission failed' },
+        return NextResponse.json(
+          { message: 'Form submission failed'  + response.text },
           { status: 500 }
-        );
+        )
       }
     } catch (error) {
       console.error(error);
-      NextResponse.json({ message: 'Internal Error', error }, { status: 500 });
+      return NextResponse.json({ message: 'Internal Error', error }, { status: 500 })
     }
   } else {
-    NextResponse.json({ message: 'Method not allowed' }, { status: 405 });
+    return NextResponse.json({ message: 'Method not allowed' }, { status: 405 })
   }
 }
