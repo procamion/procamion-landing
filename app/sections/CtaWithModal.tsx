@@ -10,7 +10,10 @@ export default function CtaWithModal() {
   const [isPopupOpen, setIsPopupOpen] = useState(false);
 
   return (
-    <section className="bg-yellow relative pb-16 pt-20 md:pb-20 md:pt-24">
+    <section
+      id="contact"
+      className="bg-yellow relative pb-16 pt-20 md:pb-20 md:pt-24"
+    >
       <div className="container">
         <div className="align-center m-auto flex max-w-[680px] flex-col items-center gap-3 md:gap-4">
           <div className="align-center flex items-center justify-center">

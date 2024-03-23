@@ -2,35 +2,36 @@ import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
-    <footer className="bg-black px-4 py-6">
-      <div className="container mx-auto mb-4 flex flex-col justify-between md:flex-row">
-        {/* Logo */}
-        <div className="mb-4 w-full md:mb-0 md:w-1/2">
-          <Image
-            width={300}
-            height={200}
-            src="/Logo.png" // Replace with your logo path
-            alt="Logo"
-          />
-        </div>
-
-        {/* Columns for links */}
-        <div className="w-full md:flex md:w-1/2 md:justify-end">
-          {/* Column 1 */}
-          <div className="mb-4 w-full md:mb-0 md:w-1/3">
-            <h4 className="mb-2 text-white">Shipper & Carrier</h4>
-            <ul className="flex flex-col gap-1 text-gray-500">
+    <footer className="bg-black">
+      <div className="container">
+        <div className="flex flex-col items-center py-9 md:flex-row md:items-start md:justify-between md:py-12">
+          <div className="mb-10 md:mb-0">
+            <Image
+              className="max-w-[225px] md:max-w-none"
+              width={432}
+              height={55}
+              src="/Logo.png"
+              alt="Logo"
+            />
+          </div>
+          <div className="md:pr-10">
+            <h4 className="mb-2 text-white">Procamion</h4>
+            <ul className="flex flex-col items-center gap-1 text-gray-500 md:items-start">
+              <Link href="#hero">Home</Link>
               <Link href="#advantages">Advantages</Link>
-              <Link href="#numbers">Numbers</Link>
-              <Link href="#faq">FAQ</Link>
+              <Link href="#contact">Contact us</Link>
             </ul>
           </div>
         </div>
-      </div>
-      <div className="align-center flex w-full items-center justify-center border-t-2 border-gray-900 p-4 text-gray-600 md:justify-end">
-        <p>«Procamion» © 2022–2023 </p>
+        <div className="flex flex-col items-center justify-between gap-4 border-t border-white border-opacity-30 py-8 text-sm font-normal text-gray-100 text-opacity-70 md:flex-row md:text-base">
+          <div className="flex flex-col items-center gap-4 md:flex-row md:gap-8">
+            <Link href="/">Site Terms of Use</Link>
+            <Link href="/">Personal data processing policy</Link>
+          </div>
+          <p className="opacity-50">«Procamion» © 2022–2024</p>
+        </div>
       </div>
     </footer>
   );

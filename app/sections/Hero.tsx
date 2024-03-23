@@ -5,7 +5,10 @@ import HeroForm from './HeroForm';
 
 const Heading = () => {
   return (
-    <section className="relative m-auto bg-black pb-20 pt-28 md:pb-[100px] md:pt-[200px]">
+    <section
+      id="hero"
+      className="relative m-auto bg-black pb-20 pt-28 md:pb-[100px] md:pt-[200px]"
+    >
       <HeroVideo />
       <div className="container relative">
         <div className="align-center relative mb-8 flex flex-col items-center justify-between md:mb-16 md:flex-row">
