@@ -7,12 +7,14 @@ import Benefits from './sections/Benefits';
 import CtaWithModal from './sections/CtaWithModal';
 import Footer from './components/Footer';
 import Video from './sections/Video';
+import Solutions from './sections/Solutions';
 
 export default function Home() {
   return (
     <main>
       <Header />
       <Hero />
+      <Solutions />
       <StepByStep />
       <Offer />
       <Cta />
