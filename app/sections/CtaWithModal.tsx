@@ -1,60 +1,39 @@
-import React from 'react';
+'use client';
+import { useState } from 'react';
 import Title from '../components/Title';
 import Subtitle from '../components/Subtitle';
 import Button from '../components/Button';
+import CtaLine from '../icons/CtaLine';
+import Popup from '../components/Popup';
 
 export default function CtaWithModal() {
+  const [isPopupOpen, setIsPopupOpen] = useState(false);
+
   return (
-    <div className="bg-amber-300">
-      <div className="align-center m-auto flex max-w-[686px] flex-col items-center justify-center gap-4 p-4 py-20">
-        <div className="align-center flex items-center justify-center">
-          <div className="absolute">
-            <svg
-              width="100%"
-              height="92"
-              viewBox="0 0 688 92"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M1 91C1 91 110.76 0.997489 344 1C577.24 1.00251 687 91 687 91"
-                stroke="url(#paint0_linear_228_994)"
-                strokeDasharray="15 15"
-              />
-              <defs>
-                <linearGradient
-                  id="paint0_linear_228_994"
-                  x1="344"
-                  y1="1"
-                  x2="344"
-                  y2="69"
-                  gradientUnits="userSpaceOnUse"
-                >
-                  <stop />
-                  <stop offset="1" stopOpacity="0" />
-                </linearGradient>
-              </defs>
-            </svg>
+    <section className="bg-yellow relative pb-16 pt-20 md:pb-20 md:pt-24">
+      <div className="container">
+        <div className="align-center m-auto flex max-w-[680px] flex-col items-center gap-3 md:gap-4">
+          <div className="align-center flex items-center justify-center">
+            <div className="pointer-events-none absolute left-1/2 top-9 w-full -translate-x-1/2">
+              <CtaLine />
+            </div>
+            <Title>Procamion</Title>
           </div>
-          <Title>Procamion</Title>
-        </div>
 
-        <Subtitle className="text-center">
-          Оn average, the response time to the cargo card takes several hours,
-          so feel free to add your cargo and probably today you will find your
-          carrier
-        </Subtitle>
+          <Subtitle className="text-center text-base md:text-[22px]">
+            Connecting continents. Simplifying shipments.
+          </Subtitle>
 
-        <div className="mt-10 flex w-full flex-col gap-4 md:flex-row">
           <Button
-            // togglePopup={togglePopup}
-            className="w-full border-2 border-black bg-black/0"
+            onClick={() => setIsPopupOpen(true)}
+            className="mt-7 w-full max-w-[200px] rounded-lg border border-black p-2 text-lg font-bold md:mt-12 md:max-w-[280px] md:p-4 md:text-[22px]"
             level={'secondary'}
           >
             Contact us
           </Button>
+          {isPopupOpen && <Popup closePopup={() => setIsPopupOpen(false)} />}
         </div>
       </div>
-    </div>
+    </section>
   );
 }

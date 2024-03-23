@@ -12,7 +12,6 @@ interface ButtonProps {
   disabled?: boolean;
   className?: string;
   isOpen?: boolean;
-  togglePopup?: (isOpen: boolean) => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -24,7 +23,6 @@ const Button: React.FC<ButtonProps> = ({
   level = 'primary', // Default to "primary" if 'level' is not specified
   disabled = false,
   className,
-  togglePopup,
 }) => {
   const getButtonStyles = () => {
     let buttonStyles =
@@ -49,15 +47,9 @@ const Button: React.FC<ButtonProps> = ({
     return buttonStyles;
   };
 
-  const handleClick = () => {
-    if (togglePopup) {
-      togglePopup(true);
-    }
-  };
-
   return (
     <button
-      onClick={(event: React.MouseEvent<HTMLButtonElement>) => handleClick()}
+      onClick={onClick}
       disabled={disabled}
       className={twMerge(`${getButtonStyles()}`, className)}
       aria-label={areaLabel}
